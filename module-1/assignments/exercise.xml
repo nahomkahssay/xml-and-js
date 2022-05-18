@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<whoAmI>
+    <whoAmI>
+        <name>Jason</name>
+        <hobbies>Sky diving</hobbies>
+    </whoAmI>
+    <whoAmI>
+        <name>Hilary</name>
+        <hobbies>Travelling</hobbies>
+    </whoAmI>
+    <whoAmI>
+        <name>Anthony</name>
+        <hobbies>Cooking</hobbies>
+    </whoAmI>
+    <whoAmI>
+        <name>Greg</name>
+        <hobbies>Teaching</hobbies>
+    </whoAmI>
+</whoAmI>
+
