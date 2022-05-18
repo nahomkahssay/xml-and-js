@@ -1,0 +1,40 @@
+# Activity 1
+
+```xml
+<emp:employeeList xmlns:emp="http://ABC.com/employee">
+  <List:personList>
+    <EMP:empID>E0000001</EMP:empID>
+    <DEP:name>Sales</DEP:name>
+    <EMP:name>John Smith</EMP:name>
+  </List:personList>
+  <List:personList>
+    <EMP:empID>E0000002</EMP:empID>
+    <DEP:name>Development</DEP:name>
+    <EMP:name>Ichiro Tanaka</EMP:name>
+  </List:personList>
+  <List:personList>
+    <EMP:empID>E0000003</EMP:empID>
+    <DEP:name>Development</DEP:name>
+    <EMP:name>Jiro Suzuki</EMP:name>
+  </List:personList>
+  <List:personList>
+    <EMP:empID>E0000004</EMP:empID>
+    <DEP:name>Administrative</DEP:name>
+    <EMP:name>Saburo Takahashi</EMP:name>
+  </List:personList>
+</emp:employeeList>
+```
+
+Resolve naming collision by adding namepsaces
+
+- `employeeList` and `personList` - list schema
+- `empId` and second `name` - employee schema
+- first `name` - department schema
+
+---
+
+- list schema - urn:corp:list
+- employee schema - urn:corp:emp
+- department schema - urn:corp:dep
+
+Save file as `module-3/asssignments/activity-1.xml`

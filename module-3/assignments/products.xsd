@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="products" type="productsType"/>
+  <xs:complexType name="manufacturerType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="id" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="pricesType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="price" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productType">
+    <xs:sequence>
+      <xs:element name="productName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Dog Shirt Gift Basket"/>
+            <xs:enumeration value="Car Curiosity Basket"/>
+            <xs:enumeration value="Piggy Snuggle Basket"/>
+            <xs:enumeration value="Dog Snuggle Basket"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="manufacturerType" name="manufacturer"/>
+      <xs:element name="description" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Something for every day of the week"/>
+            <xs:enumeration value="Playtime morning, noon, and night"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="pricesType" name="prices"/>
+      <xs:element name="productItems">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1200, 1201, 1202, 1203, 1204, 1205, 1206"/>
+            <xs:enumeration value="4430, 6500, 4434"/>
+            <xs:enumeration value="3230, 3232"/>
+            <xs:enumeration value="3230, 3232, 3250"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="sku" use="optional"/>
+    <xs:attribute type="xs:string" name="createdAt" use="optional"/>
+    <xs:attribute type="xs:string" name="shippable" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="productsType">
+    <xs:sequence>
+      <xs:element type="productType" name="product" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
