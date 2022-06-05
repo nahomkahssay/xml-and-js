@@ -3,8 +3,6 @@
 <head>
     <link rel="stylesheet" href="customers.css" />
 </head>
-
-
 <body>
     <ol id="customers"></ol>
     <script>
@@ -19,11 +17,22 @@
         xhttp.send();
 
         function stringToNode(html) {
-            const template = document.createElement(`template`);
-            html = html.trim();
-            template.innerHTML = html;
-            return template.content.firstChild;
-        }
+        const template = document.createElement(`template`);
+        html = html.trim();
+        template.innerHTML = html;
+        return template.content.firstChild;
+      }
+
+      function Customerinfo(customers) {
+        const content = `<li>
+            <article>
+                <p>${customers.name}</p>
+                <h2>${customers.appendChild}</h2>
+                <div>
+                ${customers.name} ${customers.appendChild}
+                </div>
+            </article>
+            </li>`;}
 
         function displayData(xmlDoc) {
             const listElement = document.getElementById(`customers`);
@@ -37,17 +46,17 @@
                 const orderNode= order[index];
 
                 const listItem = stringToNode(`<li>
-                    <h2>${nameNode.getAttribute(`title`)} - ${
+                    <h1>${nameNode.getAttribute(`title`)} - ${
                     cusNode.getElementsByTagName(`name`)[0].childNodes[0].nodeValue
-                    }</h2>
-                    <h2>${
+                    }</h1>
+                    <h3>${
                     cusNode.getElementsByTagName(`address`)[0].childNodes[0].nodeValue
-                    }</h2>
+                    }</h3>
                     <p> ${cusNode.getAttribute(`custID`)} - ${
                         cusNode.getElementsByTagName(`phone`)[0].childNodes[0].nodeValue
                     }</p>
-                    <h2>${`OrderID: ${orderNode.getAttribute(`orderID`)
-                    }`}</h2>
+                    <h4>${`OrderID: ${orderNode.getAttribute(`orderID`)
+                    }`}</h4>
                     <p>${`Item price: ${
                         cusNode.getElementsByTagName(`itemPrice`)[0].childNodes[0].nodeValue
                     }`}</p>
