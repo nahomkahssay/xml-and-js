@@ -29,3 +29,4 @@ const totalYears = pilots.reduce((accum, pilot) => {
 }, 0);
 
 console.log(totalYears);
+
