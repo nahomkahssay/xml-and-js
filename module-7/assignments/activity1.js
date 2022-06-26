@@ -91,6 +91,6 @@ const data = students.map((student, index) => ({
 
 console.log(data);
 
-const filtered = data.filter((data) => data.id > 5);
+const filtered = data.filter((obj) => obj.id > 5);
 
 console.log(filtered);
