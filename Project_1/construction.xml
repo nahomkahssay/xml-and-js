@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="./construction.xsl"?>
 <!DOCTYPE jobs [
-        <!ELEMENT jobs (job)*>
-        <!ELEMENT job (startDate|endDate|address|workers|equipments|supplies|contractors)*>
-        <!ELEMENT startDate (#PCDATA)>
+        <!ELEMENT jobs (job)*> <!-- jobs' root element --> 
+        <!ELEMENT job (startDate|endDate|address|workers|equipments|supplies|contractors)*> <!-- Child Elements of jobs -->
+        <!ELEMENT startDate (#PCDATA)> <!-- Data contained by Start Date -->
         <!ELEMENT endDate (#PCDATA)>
         <!ELEMENT address (street|city|region|country)*>
         <!ELEMENT street (#PCDATA)>
@@ -26,12 +26,12 @@
         <!ELEMENT contractors (name)*>
         <!ELEMENT name (#PCDATA)>
         ]>
-<jobs>
-    <job>
-        <startDate>2007-08-19</startDate>
+<jobs><!-- root element -->
+    <job><!-- child element of jobs -->
+        <startDate>2007-08-19</startDate><!-- child element of job -->
         <endDate>2018-01-19</endDate>
-        <address>
-            <street>48 Rusk Street</street>
+        <address>//street, city...
+            <street>48 Rusk Street</street> <!-- child element of address -->
             <city>La Plaine-Saint-Denis</city>
             <region>Île-de-France</region>
             <country>France</country>

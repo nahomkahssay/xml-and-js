@@ -4,36 +4,43 @@
     <html>
         <body>
             <table border='1'>
-                <tr>
-                    <th>Start Date</th>
-                    <th>End Date</th>
-                    <th>Supply</th>
+            <!-- table row --> <!--  -->
+                <tr> 
+                <!-- Header Cells -->
+                    <th>Start Date</th> 
+                    <th>End Date</th> 
+                    <th>Supply</th> 
                     <th>Equipment</th>
                     <th>Worker</th>
                     <th>Address</th>
                 </tr>
                 <jobs>
-                    <xsl:for-each select="/jobs/job">
+                    <!-- Loop through job child -->
+                    <xsl:for-each select="/jobs/job">  // loops through the job child 
                         <tr>
                             <job>
                                 <td>
+                                <!-- Start Date data -->
                                     <startDate>
-                                        <xsl:value-of select="./startDate"/>
+                                        <xsl:value-of select="./startDate"/>  
                                     </startDate>
                                 </td>
                                 <td>
+                                <!-- End Date data -->
                                     <endDate>
-                                        <xsl:value-of select="./endDate"/>
+                                        <xsl:value-of select="./endDate"/>  
                                     </endDate>
                                 </td>
                                 <td>
+
                                     <supplies>
-                                        <xsl:for-each select="./supplies/supply">
+                                    <!-- Loop through supply child -->
+                                        <xsl:for-each select="./supplies/supply">  
                                             <supply>
-                                                <ul>
+                                                <ul>   
                                                     <li>
-                                                        <material>
-                                                            <xsl:value-of select="./material"/>
+                                                        <material> 
+                                                            <xsl:value-of select="./material"/> 
                                                         </material>
                                                         (<qty>
                                                             <xsl:value-of select="./qty"/>
