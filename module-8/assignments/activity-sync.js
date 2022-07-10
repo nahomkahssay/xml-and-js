@@ -50,32 +50,34 @@ class Person {
 
 const person = Person.of("Marcus Aurelius");
 
-// console.log("inc(5) =", inc(5));
+
 inc(5)
   .then((value) => console.log("inc(5) =", value))
   .catch((error) => console.error("Error:", error));
 
-// console.log("sum(1, 3) =", sum(1, 3));
+
 sum(1, 3)
   .then((value) => console.log("sum(1, 3) =", value))
   .catch((error) => console.error("Error:", error));
 
-// console.log("max(8, 6) =", max(8, 6));
+
 max(8, 6)
   .then((value) => console.log("max(8, 6) =", value))
   .catch((error) => console.error("Error:", error));
 
-// console.log("avg(8, 6) =", avg(8, 6));
+
 avg(8, 6)
   .then((value) => console.log("avg(8, 6) =", value))
   .catch((error) => console.error("Error:", error));
 
-// console.log("obj.split() =", obj.split());
+
 obj.split()
   .then((value) => console.log("obj.split() =", value))
   .catch((error) => console.error("Error:", error));
 
-// console.log("person.split() =", person.split());
+
 person.split()
   .then((value) => console.log("person.split() =", value))
   .catch((error) => console.error("Error:", error));
+
+const promise = new Promise(executor);
