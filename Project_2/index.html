@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Portal(API)</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="pageTitle">
+      <h1>Live News Portal - Mediastack API</h1>
+    </div>
+      <form onsubmit="onSubmit(event)" onreset="onReset()">
+        <div id="filter">
+          <div>
+            <label for="titles">Filter Title</label>
+            <input 
+            name="titleTerm"
+            id="titles"
+            placeholder="Enter title" 
+            type="text"
+            /> 
+          </div>
+          <br>
+          <div>
+            <label for="countries">Filter Country</label>
+            <select name="countryTerm" id="countries">
+              <option value="all">All</option>
+              <option value="eg">Egypt</option>
+              <option value="iq">Iraq</option>
+              <option value="ma">Morocco</option>
+            </select>
+          </div>
+          <br>
+          <div>
+            <button type="submit">Apply Filter</button>
+            <button type="reset">Reset Filter</button>
+          </div>
+        </div>
+      </form>
+      <div id="news"></div>
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>
